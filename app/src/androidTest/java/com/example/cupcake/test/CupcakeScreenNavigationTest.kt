@@ -56,6 +56,7 @@ class CupcakeScreenNavigationTest {
 
     @Test
     fun cupcakeNavHost_verifyStartDestination() {
+        //this is a axuciliar function to check the start destination
         navController.assertCurrentRouteName(CupcakeScreen.Start.name)
     }
 
@@ -98,6 +99,7 @@ class CupcakeScreenNavigationTest {
     @Test
     fun cupcakeNavHost_clickNextOnPickupScreen_navigatesToSummaryScreen() {
         navigateToPickupScreen()
+        //search on clickable node with the date of tomorrow
         composeTestRule.onNodeWithText(getFormattedDate())
             .performClick()
         composeTestRule.onNodeWithStringId(R.string.next)
